@@ -28,17 +28,17 @@
         </div>
 
         <div class="center-content">
-            <div class="center-content-first">
+            <div class="center-content-first card">
                 <p>Add New Card</p>
                 <i class="fas fa-plus-circle"></i>
             </div>
 
-            <div class="center-content-second">
+            <div class="center-content-second card">
                 <i class="fab fa-gg-circle"></i>
                 <i class="fas fa-cloud"></i>
             </div>
 
-            <div class="center-content-third">
+            <div class="center-content-third card">
                 <div class="center-content-third-left">
                     <p>VISA</p>
                     <p class="phone">4464</p>
@@ -87,3 +87,23 @@
     </div>
 </body>
 </html>
+<script>
+
+    let items = document.querySelectorAll(".card ");
+    
+    items.forEach(item => {
+        item.addEventListener('click', e => {
+            var element =  document.querySelector('.card.active');
+            if (element)
+            {
+                element.classList.remove('active')
+
+            }
+            // document.querySelector('.card.active').classList.remove('active')
+            e.target.classList.add('active');
+
+        })
+    })
+    // console.log(items)
+
+</script>
